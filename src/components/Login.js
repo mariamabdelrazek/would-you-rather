@@ -11,7 +11,6 @@ class Login extends Component {
   }
   handleSubmit = (ev) => {
     const { dispatch } = this.props;
-    console.log(this.state);
     dispatch(setAuthedUser(this.state.user));
   };
   onChange = (ev) => {
@@ -28,8 +27,8 @@ class Login extends Component {
       <div className="center">
         <h1>Please Choose a User</h1>
         <form onSubmit={this.handleSubmit}>
-          <select onChange={this.onChange}>
-            <option disabled selected>
+          <select onChange={this.onChange} defaultValue="selectUser">
+            <option disabled value="selectUser">
               Select User
             </option>
             {UsersIds.map((id) => (

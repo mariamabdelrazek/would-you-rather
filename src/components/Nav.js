@@ -2,8 +2,15 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu } from "antd";
+import { logoutUser } from "../actions/authedUser";
 
 class Nav extends Component {
+  logout = (e) => {
+    const { dispatch } = this.props;
+
+    dispatch(logoutUser());
+  };
+  x;
   render() {
     const { name } = this.props;
     return (
@@ -28,7 +35,7 @@ class Nav extends Component {
             <p>{`Hello, ${name}`}</p>
           </Menu.Item>
           <Menu.Item key="5">
-            <NavLink to="/logout" activeClassName="active">
+            <NavLink to="/" activeClassName="active" onClick={this.logout}>
               Logout
             </NavLink>
           </Menu.Item>
