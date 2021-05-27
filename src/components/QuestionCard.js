@@ -4,9 +4,6 @@ import { Avatar, Button, Card } from "antd";
 import { Link, withRouter } from "react-router-dom";
 
 class QuestionCard extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
   render() {
     const { user, question, id } = this.props;
     return (
@@ -21,7 +18,7 @@ class QuestionCard extends Component {
         </div>
         <div className="question-container">
           <p>Would you rather</p>
-          <Link to={`/question/${id}`}>
+          <Link to={`/questions/${id}`}>
             <Button type="primary" ghost className="question-card__button">
               View Poll
             </Button>

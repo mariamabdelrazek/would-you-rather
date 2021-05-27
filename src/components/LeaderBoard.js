@@ -4,7 +4,6 @@ import UserCardStats from "./UserCardStats";
 
 class LeaderBoard extends Component {
   render() {
-    console.log(this.props);
     const { usersIds } = this.props;
     return (
       <div>
@@ -26,11 +25,12 @@ function mapStateToProps({ users }) {
     const questionsB = users[b].questions.length;
     const answersA = Object.keys(users[a].answers).length;
     const answersB = Object.keys(users[b].answers).length;
-    const score = questionsA + questionsB + answersA + answersB;
+    const score = questionsB + answersB - questionsA - answersA;
     return score;
   });
   return {
     usersIds,
+    users,
   };
 }
 

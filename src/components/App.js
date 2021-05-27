@@ -16,7 +16,6 @@ class App extends Component {
     this.props.dispatch(handleInitialData());
   }
   render() {
-    console.log(this.props);
     return (
       <Router>
         <Fragment>
@@ -29,7 +28,7 @@ class App extends Component {
                 <Nav />
                 <Switch>
                   <Route path="/" exact component={QuestionsList} />
-                  <Route path="/question/:id" exact component={QuestionPage} />
+                  <Route path="/questions/:id" exact component={QuestionPage} />
                   <Route path="/add" exact component={NewQuestion} />
                   <Route path="/leaderboard" exact component={LeaderBoard} />
                   <Route path="/login" exact component={Login} />

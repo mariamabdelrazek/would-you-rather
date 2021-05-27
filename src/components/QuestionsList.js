@@ -5,9 +5,6 @@ import QuestionCard from "./QuestionCard";
 const { TabPane } = Tabs;
 
 class QuestionList extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
   render() {
     const { answeredIds } = this.props;
     const { unansweredIds } = this.props;

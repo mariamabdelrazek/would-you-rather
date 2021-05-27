@@ -7,7 +7,6 @@ import {
 export default function tweets(state = {}, action) {
   switch (action.type) {
     case RECEIVE_QUESTIONS:
-      console.log(state, action);
       return {
         ...state,
         ...action.questions,
@@ -26,7 +25,6 @@ export default function tweets(state = {}, action) {
         },
       };
     case SAVE_NEW_QUESTION:
-      console.log(action);
       return {
         ...state,
         [action.question.id]: action.question,

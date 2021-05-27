@@ -18,7 +18,6 @@ export function handleInitialData() {
   return (dispatch) => {
     dispatch(showLoading());
     return getInitialData().then(({ users, questions }) => {
-      console.log(users, questions, AUTHED_ID);
       dispatch(receiveUsers(users));
       dispatch(receiveQuestions(questions));
       dispatch(setAuthedUser(AUTHED_ID));
@@ -43,7 +42,6 @@ export function handleNewQuestion(question) {
   return (dispatch) => {
     dispatch(showLoading());
     return saveQuestion(question).then((question) => {
-      console.log(question);
       dispatch(saveNewQuestion(question));
       dispatch(saveUserQuestion(question));
       dispatch(hideLoading());

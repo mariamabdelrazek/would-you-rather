@@ -5,7 +5,6 @@ import { Card, Avatar } from "antd";
 class UserCardStats extends Component {
   render() {
     const { user, answersNum, questionsNum, score } = this.props;
-    console.log(this.props);
     return (
       <div>
         <Card className="question-card" title={user.name}>

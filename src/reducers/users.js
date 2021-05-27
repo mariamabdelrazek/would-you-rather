@@ -23,7 +23,6 @@ export default function users(state = {}, action) {
         },
       };
     case SAVE_USER_QUESTION:
-      console.log(action);
       return {
         ...state,
         [action.question.author]: {
