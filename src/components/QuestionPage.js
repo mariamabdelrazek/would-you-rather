@@ -13,9 +13,7 @@ class QuestionPage extends Component {
       answer: "optionOne",
     };
   }
-  componentDidMount() {
-    console.log(this.props);
-  }
+
   handleChange = (ev) => {
     const answer = ev.target.value;
     this.setState(() => ({
@@ -24,7 +22,6 @@ class QuestionPage extends Component {
   };
   handleSubmitAnswer = (ev) => {
     ev.preventDefault();
-    console.log(this.state);
     const { authedUser, question, qid, dispatch } = this.props;
     const answer = this.state.answer;
     dispatch(handleAnswerQuestion({ authedUser, qid, answer }));

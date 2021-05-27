@@ -10,7 +10,7 @@ class LeaderBoard extends Component {
       <div>
         <ul className="questions-list">
           {usersIds.map((id) => (
-            <li>
+            <li key={id}>
               <UserCardStats userId={id} />
             </li>
           ))}
