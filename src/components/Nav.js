@@ -20,7 +20,7 @@ class Nav extends Component {
             </NavLink>
           </Menu.Item>
           <Menu.Item key="3">
-            <NavLink to="/new" activeClassName="active">
+            <NavLink to="/leaderboard" activeClassName="active">
               Leader Board
             </NavLink>
           </Menu.Item>

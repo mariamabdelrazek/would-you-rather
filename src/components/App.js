@@ -7,6 +7,7 @@ import Nav from "./Nav";
 import QuestionsList from "./QuestionsList";
 import QuestionPage from "./QuestionPage";
 import NewQuestion from "./NewQuestion";
+import LeaderBoard from "./LeaderBoard";
 
 class App extends Component {
   componentDidMount() {
@@ -19,12 +20,13 @@ class App extends Component {
           <LoadingBar />
           {this.props.loading === true ? null : (
             <Fragment>
-              <Nav />
               <div className="container">
+                <Nav />
                 <div>
                   <Route path="/" exact component={QuestionsList} />
                   <Route path="/question/:id" exact component={QuestionPage} />
                   <Route path="/add" exact component={NewQuestion} />
+                  <Route path="/leaderboard" exact component={LeaderBoard} />
                 </div>
               </div>
             </Fragment>

@@ -1,12 +1,9 @@
 import { connect } from "react-redux";
 import React, { Component } from "react";
-import { Avatar, Button, Card } from "antd";
-import { Link } from "react-router-dom";
+import { Avatar, Card } from "antd";
 
 class UnansweredPole extends Component {
-  componentDidMount() {}
   render() {
-    console.log(this.props);
     const { user, question, id, handleChange, handleSubmitAnswer } = this.props;
     if (question === null) {
       return <p>This Question doesn't exist</p>;
