@@ -1,13 +1,102 @@
+@import "~antd/dist/antd.css";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.questions-list {
+  margin: 0;
+  padding: 0;
+}
+.questions-list li {
+  display: block;
+}
+.question-card {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.question-card form label {
+  display: block;
+}
+
+.button {
+  display: block;
+  min-width: 50%;
+  background-color: #2cb5bb;
+  border: 1px solid #2cb5bb;
+  padding: 15px;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.ant-card-head {
+  background-color: #c5b1ca;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ant-card-body {
+  display: flex;
+}
+.avatar-container {
+  width: 25%;
+}
+.question-container {
+  width: 75%;
+}
+.nav-container {
+  display: flex;
+}
+.nav-container .left {
+  width: 70%;
+  display: flex;
+}
+.nav-container .right {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-name {
+  margin-left: 50%;
+}
+
+.new-question-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.light {
+  font-size: 14px;
+}
+.new-question textarea {
+  display: block;
+  resize: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.new-question p {
+  text-align: center;
+  margin-block: 10px;
+  color: #2cb5bb;
+  font-size: 28px;
+}
+
+.new-question-container {
+  width: 100%;
 }

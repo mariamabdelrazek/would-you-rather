@@ -5,6 +5,8 @@ import { handleInitialData } from "../actions/shared";
 import LoadingBar from "react-redux-loading";
 import Nav from "./Nav";
 import QuestionsList from "./QuestionsList";
+import QuestionPage from "./QuestionPage";
+import NewQuestion from "./NewQuestion";
 
 class App extends Component {
   componentDidMount() {
@@ -14,24 +16,28 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          {/* <LoadingBar /> */}
-          <div className="container">
-            <Nav />
-            {this.props.loading === true ? null : (
-              <div>
-                <Route path="/" exact component={QuestionsList} />
+          <LoadingBar />
+          {this.props.loading === true ? null : (
+            <Fragment>
+              <Nav />
+              <div className="container">
+                <div>
+                  <Route path="/" exact component={QuestionsList} />
+                  <Route path="/question/:id" exact component={QuestionPage} />
+                  <Route path="/add" exact component={NewQuestion} />
+                </div>
               </div>
-            )}
-          </div>
+            </Fragment>
+          )}
         </Fragment>
       </Router>
     );
   }
 }
 
-function mapStateToProps() {
+function mapStateToProps({ authedUser }) {
   return {
-    // loading: authedUser === null
+    loading: authedUser === null,
   };
 }
 
